@@ -37,7 +37,7 @@ export function SignUp() {
           <p className='text-muted-foreground text-left text-sm sm:text-base'>
             {t('Already have an account?')}{' '}
             <Link
-              to='/sign-in'
+              to='/login'
               className='hover:text-primary font-medium underline underline-offset-4'
             >
               {t('Sign in')}

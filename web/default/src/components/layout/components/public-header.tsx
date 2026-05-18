@@ -128,7 +128,7 @@ export function PublicHeader(props: PublicHeaderProps) {
     const timeoutId = window.setTimeout(() => {
       const redirect = authPromptTarget.href
       setAuthPromptTarget(null)
-      navigate({ to: '/sign-in', search: { redirect } })
+      navigate({ to: '/login', search: { redirect } })
     }, AUTH_PROMPT_SECONDS * 1000)
 
     return () => {
@@ -145,7 +145,7 @@ export function PublicHeader(props: PublicHeaderProps) {
   const navigateToSignIn = useCallback(() => {
     const redirect = authPromptTarget?.href || '/'
     setAuthPromptTarget(null)
-    navigate({ to: '/sign-in', search: { redirect } })
+    navigate({ to: '/login', search: { redirect } })
   }, [authPromptTarget?.href, navigate])
 
   const handleNavLinkClick = useCallback(
@@ -288,7 +288,7 @@ export function PublicHeader(props: PublicHeaderProps) {
                     <Button
                       size='sm'
                       className='h-8 rounded-lg px-3.5 text-xs font-medium'
-                      render={<Link to='/sign-in' />}
+                      render={<Link to='/login' />}
                     >
                       {t('Sign in')}
                     </Button>
@@ -404,7 +404,7 @@ export function PublicHeader(props: PublicHeaderProps) {
           >
             {showAuthButtons && (
               <Link
-                to={isAuthenticated ? '/dashboard' : '/sign-in'}
+                to={isAuthenticated ? '/login' : '/login'}
                 onClick={() => setMobileOpen(false)}
                 className='bg-foreground text-background inline-flex h-10 items-center justify-center rounded-lg text-sm font-medium transition-opacity hover:opacity-90 active:opacity-80'
               >

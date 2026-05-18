@@ -18,5 +18,19 @@
 
   <body>
     <div id="root"></div>
+    <script>
+      (function () {
+        var alias = {
+          '/sign-up': '/register',
+          '/sign-in': '/login',
+          '/dashboard': '/login',
+        };
+        var pathname = window.location.pathname;
+        var target = alias[pathname];
+        if (target) {
+          window.location.replace(target + window.location.search + window.location.hash);
+        }
+      })();
+    </script>
   </body>
 </html>

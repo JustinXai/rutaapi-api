@@ -36,7 +36,7 @@ export function Otp() {
           <p className='text-muted-foreground text-left text-sm sm:text-base'>
             {t('Session expired?')}{' '}
             <Link
-              to='/sign-in'
+              to='/login'
               className='hover:text-primary font-medium underline underline-offset-4'
             >
               {t('Re-login')}

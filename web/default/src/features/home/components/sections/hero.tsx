@@ -74,7 +74,7 @@ export function Hero(props: HeroProps) {
           {props.isAuthenticated ? (
             <Button
               className='group rounded-lg'
-              render={<Link to='/dashboard' />}
+              render={<Link to='/login' />}
             >
               {t('Go to Dashboard')}
               <ArrowRight className='ml-1 size-3.5 transition-transform duration-200 group-hover:translate-x-0.5' />
@@ -83,7 +83,7 @@ export function Hero(props: HeroProps) {
             <>
               <Button
                 className='group rounded-lg'
-                render={<Link to='/sign-up' />}
+                render={<Link to='/register' />}
               >
                 {t('Get Started')}
                 <ArrowRight className='ml-1 size-3.5 transition-transform duration-200 group-hover:translate-x-0.5' />

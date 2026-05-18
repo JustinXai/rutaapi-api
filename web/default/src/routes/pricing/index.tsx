@@ -46,7 +46,7 @@ export const Route = createFileRoute('/pricing/')({
       const { auth } = useAuthStore.getState()
       if (!auth.user) {
         throw redirect({
-          to: '/sign-in',
+          to: '/login',
           search: { redirect: location.href },
         })
       }

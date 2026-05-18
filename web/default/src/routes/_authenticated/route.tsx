@@ -31,7 +31,7 @@ export const Route = createFileRoute('/_authenticated')({
     // 如果本地没有用户信息，直接跳转登录页
     if (!auth.user) {
       throw redirect({
-        to: '/sign-in',
+        to: '/login',
         search: { redirect: location.href },
       })
     }
@@ -47,7 +47,7 @@ export const Route = createFileRoute('/_authenticated')({
         // 验证失败或 API 调用失败，清除本地缓存并跳转登录页
         auth.reset()
         throw redirect({
-          to: '/sign-in',
+          to: '/login',
           search: { redirect: location.href },
         })
       }

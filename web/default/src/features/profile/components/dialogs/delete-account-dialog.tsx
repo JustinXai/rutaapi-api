@@ -80,7 +80,7 @@ export function DeleteAccountDialog({
 
         reset()
         localStorage.removeItem('user')
-        navigate({ to: '/sign-in' })
+        navigate({ to: '/login' })
       } else {
         toast.error(response.message || t('Failed to delete account'))
       }
